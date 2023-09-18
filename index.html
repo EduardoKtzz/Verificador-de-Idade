@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Verificador de Idade</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <header>
+         <h1>Verificador de Idade!</h1>
+      </header>
+
+      <section>
+         <div>
+            <p>
+               Ano de nascimento:
+               <input
+                  name="txtano"
+                  id="txtano"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type="number"
+                  maxlength="4"
+               />
+            </p>
+
+            <p>
+               Sexo:
+               <input type="radio" name="radsex" id="mas" checked />
+               <label for="masc">Masculino</label>
+               <input type="radio" name="radsex" id="fem" />
+               <label for="masc">feminino</label>
+            </p>
+
+            <p>
+               <input
+                  id="botão"
+                  type="button"
+                  value="Verificar"
+                  onclick="verificar()"
+               />
+            </p>
+         </div>
+
+         <div id="res">Responda as perguntas acima para ver o resultado!</div>
+      </section>
+
+      <footer>
+         <p>&copy; Eduardo Klitzke Oliveira</p>
+      </footer>
+   </body>
+   <script src="./main.js"></script>
+</html>
